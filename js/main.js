@@ -3,7 +3,7 @@ myRequest.open('GET', './js/MOCK_DATA.json');
 myRequest.onload = function(){
     var myData = JSON.parse(myRequest.responseText);
     dataTable(myData);
-    // console.log(ourData[0]);
+    // console.log(myData[0]);
 };
 myRequest.send();
 
