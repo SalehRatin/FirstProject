@@ -8,22 +8,23 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="./js/main.js"></script>
+    <script src="./js/tablesort.js"></script>
+    <script src="./js/delete-row.js"></script>
 </head>
 <body>
 <div class="container">
-    <table class="table_id">
+    <table id="table" class="my-table">
         <thead>
             <tr>
-                <th>ID</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Gender</th>
-                <th>Phone</th>
+                <th onclick="sortTable('userId');">UserID</th>
+                <th onclick="sortTable('id');">ID</th>
+                <th onclick="sortTable('title');">Title</th>
+                <th onclick="sortTable('completed');">Completion</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody id="data">
-
+    
         </tbody>
     </table>
 </div>
