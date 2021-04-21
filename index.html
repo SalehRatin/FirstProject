@@ -9,24 +9,77 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="./js/main.js"></script>
     <script src="./js/tablesort.js"></script>
-    <script src="./js/delete-row.js"></script>
+    <script src="./js/formActions.js"></script>
 </head>
 <body>
-<div class="container">
-    <table id="table" class="my-table">
-        <thead>
-            <tr>
-                <th onclick="sortTable('userId');">UserID</th>
-                <th onclick="sortTable('id');">ID</th>
-                <th onclick="sortTable('title');">Title</th>
-                <th onclick="sortTable('completed');">Completion</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody id="data">
-    
-        </tbody>
-    </table>
-</div>
+    <div class="container">
+        <div class="usertable">
+            <table id="table" class="my-table">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable('userId');">UserID</th>
+                        <th onclick="sortTable('id');">ID</th>
+                        <th onclick="sortTable('title');">Title</th>
+                        <th onclick="sortTable('completed');">Completion</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="data">
+                    
+                </tbody>
+            </table>
+        </div>
+        <div class="containerForm">
+            <form>
+                <div class="row">
+                    <div class="firstRow">
+                        <label for="userid">UserID</label>
+                    </div>
+                    <div class="secondRow">
+                        <input type="text" id="userid" name="userid">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="firstRow">
+                        <label for="id">ID</label>
+                    </div>
+                    <div class="secondRow">
+                        <input type="text" id="id">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="firstRow">
+                        <label for="title">Title</label>
+                    </div>
+                    <div class="secondRow">
+                        <input type="text" id="title">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="firstRow">
+                        <label for="completion">Completion</label>
+                    </div>
+                    <div class="secondRow">
+                        <input type="text" id="completion">
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="button" class="btn" value="Submit" onclick="submitFormData()">
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+                <!-- document.getElementById("userid").value = this.cells[0].innerHTML;
+                document.getElementById("id").value = this.cells[1].innerHTML;
+                document.getElementById("title").value = this.cells[2].innerHTML;
+                document.getElementById("completion").value = this.cells[3].innerHTML; -->

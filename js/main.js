@@ -16,8 +16,8 @@ function dataTable(data) {
       temp += "<td style='text-align: center'>" + u.id + '</td>';
       temp += '<td>' + u.title + '</td>';
       temp += "<td style='text-align: center'>" + u.completed + '</td>';
-      temp += "<td>" + '<input type="button" value="Delete" onclick="deleteRow(this)"> . <input value="Edit" type="button">' + '</td></tr>';
+      temp += "<td>" + '<input type="button" value="Delete" onclick="deleteRow(this)"> <input type="button" value="Edit" onclick="insertToForm(this)">' + '</td></tr>';
       document.getElementById('data').innerHTML = temp;
     });
-  }
+  } 
 }
