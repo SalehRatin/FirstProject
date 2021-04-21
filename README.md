@@ -7,3 +7,4 @@ Only JavaScript & CSS
 JS codes are separated from html
 Added json command, "npm start"
 Ajax request to server
+Delete and Edit Actions added to the table, with a submit form
