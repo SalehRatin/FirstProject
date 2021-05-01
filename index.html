@@ -10,24 +10,53 @@
     <script src="./js/main.js"></script>
     <script src="./js/tablesort.js"></script>
     <script src="./js/formActions.js"></script>
+    <script src="./js/pagination.js"></script>
+    <script src="./js/sidebarToggle.js"></script>
 </head>
 <body>
     <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-head">
+                <h3>Switch to hide!</h3>
+            </div>
+            <label class="switch" for="chk_id">
+                ID
+                <input type="checkbox" value="None" name="check" id="chk_id" checked>
+            </label>
+            <label class="switch" for="chk_userid">
+                User ID
+                <input type="checkbox" value="None" name="check" id="chk_userid" checked/>
+            </label>
+            <label class="switch" for="chk_title">
+                Title
+                <input type="checkbox" value="None" name="check" id="chk_title" checked/>
+            </label> 
+            <label class="switch" for="chk_completed">
+                Completion
+                <input type="checkbox" value="None" name="check" id="chk_completed" checked/>
+            </label>
+            <label class="switch" for="chk_action">
+                Action
+                <input type="checkbox" value="None" name="check" id="chk_action" checked/>
+            </label>
+        </div>
         <div class="usertable">
             <table id="table" class="my-table">
                 <thead>
                     <tr>
-                        <th onclick="sortTable('userId');">UserID</th>
-                        <th onclick="sortTable('id');">ID</th>
-                        <th onclick="sortTable('title');">Title</th>
-                        <th onclick="sortTable('completed');">Completion</th>
+                        <th id="tbl-head-userid" onclick="sortTable('userId', event);">ID</th>
+                        <th id="tbl-head-id" onclick="sortTable('id', event);">UserID</th>
+                        <th id="tbl-head-title" onclick="sortTable('title', event);">Title</th>
+                        <th id="tbl-head-completed" onclick="sortTable('completed', event);">Completion</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody id="data">
-                    
+                                 
                 </tbody>
-            </table>
+             </table>
+             <ul id="pagination">
+            </ul>
         </div>
         <div class="containerForm">
             <form>
@@ -71,15 +100,3 @@
     </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-                <!-- document.getElementById("userid").value = this.cells[0].innerHTML;
-                document.getElementById("id").value = this.cells[1].innerHTML;
-                document.getElementById("title").value = this.cells[2].innerHTML;
-                document.getElementById("completion").value = this.cells[3].innerHTML; -->
